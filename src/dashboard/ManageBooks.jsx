@@ -13,14 +13,14 @@ const ManageBooks = () => {
   const [Books, setBooks] = useState([]);
 
   const getBookDataList = async () => {
-    const res = await axios.get("http://localhost:5000/all-books")
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/all-books`)
     console.log(res.data)
     setBooks(res.data)
   }
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/book/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/book/${id}`);
       setBooks(Books.filter(book => book._id !== id));
       toast.success("Data deleted successfully!");
     } catch (error) {

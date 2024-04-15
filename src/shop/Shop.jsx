@@ -6,9 +6,9 @@ import { Card } from 'flowbite-react';
 
 const Shop = () => {
   const [books, setBooks] = useState([]);
-
+   
   const getBooksData = async () => {
-    const response = await axios.get("http://localhost:5000/all-books");
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/all-books`);
     console.log(response.data)
     setBooks(response.data)
   }
