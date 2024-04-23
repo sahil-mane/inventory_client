@@ -18,7 +18,7 @@ const SideBar = () => {
                     <Sidebar.Item href="/admin/dashboard" icon={HiChartPie}>
                         Dashboard
                     </Sidebar.Item>
-                    <Sidebar.Item href="/admin/dashboard/upload" icon={HiOutlineCloudUpload}>
+                    <Sidebar.Item href={`${import.meta.env.VITE_API_URL}/admin/dashboard/upload`} icon={HiOutlineCloudUpload}>
                         Upload Book
                     </Sidebar.Item>
                     <Sidebar.Item href="/admin/dashboard/manage" icon={HiInbox}>
