@@ -71,7 +71,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
         {
           path:"/admin/dashboard/edit-books/:id",
           element:<EditBooks />,
-          loader: ({params})=>fetch(`http://localhost:5000/book/${params.id}`)
+          loader: ({params})=>fetch(`${import.meta.env.VITE_API_URL}/book/${params.id}`)
         }
        
       ]
