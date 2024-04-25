@@ -22,7 +22,7 @@ const SideBar = () => {
                     <Sidebar.Item as={Link} to="/admin/dashboard/upload" icon={HiOutlineCloudUpload}>
                         Upload Book
                     </Sidebar.Item>
-                    <Sidebar.Item href="/admin/dashboard/manage" icon={HiInbox}>
+                    <Sidebar.Item as={Link} to="/admin/dashboard/manage" icon={HiInbox}>
                         Manage Book
                     </Sidebar.Item>
                     <Sidebar.Item href="#" icon={HiUser}>
@@ -31,10 +31,10 @@ const SideBar = () => {
                     <Sidebar.Item href="#" icon={HiShoppingBag}>
                         Products
                     </Sidebar.Item>
-                    <Sidebar.Item href="/login" icon={HiArrowSmRight}>
+                    <Sidebar.Item as={Link} to="/login" icon={HiArrowSmRight}>
                         Sign In
                     </Sidebar.Item>
-                    <Sidebar.Item href="/logout" icon={HiTable}>
+                    <Sidebar.Item as={Link} to="/logout" icon={HiTable}>
                         Log out
                     </Sidebar.Item>
                 </Sidebar.ItemGroup>
