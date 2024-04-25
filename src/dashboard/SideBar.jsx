@@ -1,5 +1,6 @@
 // import React from 'react'
 import { Sidebar } from 'flowbite-react';
+import { Link } from 'react-router-dom';
 // "https://www.flowbite-react.com/favicon.svg"
 import { BiBuoy } from 'react-icons/bi';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
@@ -18,7 +19,7 @@ const SideBar = () => {
                     <Sidebar.Item href="/admin/dashboard" icon={HiChartPie}>
                         Dashboard
                     </Sidebar.Item>
-                    <Sidebar.Item href="/admin/dashboard/upload" icon={HiOutlineCloudUpload}>
+                    <Sidebar.Item as={Link} to="/admin/dashboard/upload" icon={HiOutlineCloudUpload}>
                         Upload Book
                     </Sidebar.Item>
                     <Sidebar.Item href="/admin/dashboard/manage" icon={HiInbox}>
